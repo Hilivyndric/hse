@@ -81,21 +81,13 @@ img {
   text-align: center;
 }
 
-.consent-illustration {
-  margin-bottom: 20px;
-  color: var(--accent);
-}
-
-.consent-illustration svg {
-  display: inline-block;
-  vertical-align: middle;
-}
-
 .consent-title {
   margin: 0 0 12px;
   font-size: 1.35rem;
   font-weight: 700;
   color: var(--text);
+  text-align: center;
+  white-space: nowrap;
 }
 
 .consent-text {
