@@ -14,6 +14,28 @@
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
+    <div class="consent-overlay" id="consent-overlay" role="dialog" aria-modal="true" aria-labelledby="consent-title">
+      <div class="consent-modal">
+        <div class="consent-illustration" aria-hidden="true">
+          <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="40" cy="40" r="38" stroke="currentColor" stroke-width="2" fill="none" opacity="0.3"/>
+            <path d="M40 22v36M26 36l14 14 28-28" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          </svg>
+        </div>
+        <h2 class="consent-title" id="consent-title">Обработка персональных данных</h2>
+        <p class="consent-text">
+          Мы используем файлы cookie и обрабатываем персональные данные для улучшения работы сайта и вашего удобства. Продолжая пользоваться сайтом, вы соглашаетесь с&nbsp;<a href="./privacy.html" target="_blank" rel="noopener" class="consent-link">политикой конфиденциальности</a>.
+        </p>
+        <label class="consent-checkbox-wrap">
+          <input type="checkbox" id="consent-checkbox" class="consent-checkbox" required />
+          <span class="consent-checkbox-label">Я согласен на обработку персональных данных</span>
+        </label>
+        <button type="button" class="button button-primary consent-accept" id="consent-accept" disabled>
+          Принять и продолжить
+        </button>
+      </div>
+    </div>
+
     <div class="page-shell">
       <header class="site-header">
         <a class="brand" href="#top" aria-label="НИУ ВШЭ">
@@ -28,6 +50,7 @@
           <a href="#audience">Кому подойдет</a>
           <a href="#advantages">Преимущества</a>
           <a href="#faq">Вопросы</a>
+          <a href="#contacts">Контакты</a>
         </nav>
 
         <a class="header-cta" href="#cta">Подобрать программу</a>
@@ -300,7 +323,7 @@
           </div>
         </section>
 
-        <footer class="site-footer">
+        <footer class="site-footer" id="contacts">
           <div class="footer-inner">
             <div class="footer-contacts">
               <h3 class="footer-heading">Контакты</h3>
@@ -320,6 +343,7 @@
               <a href="https://www.hse.ru/en/info/">О&nbsp;университете</a>
               <a href="https://www.hse.ru/en/education/">Обучение</a>
               <a href="https://www.hse.ru/en/science/">Исследования</a>
+              <a href="./privacy.html">Политика конфиденциальности</a>
             </div>
             <p class="footer-copy">
               © НИУ ВШЭ, 1993–2026
