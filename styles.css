@@ -1,20 +1,26 @@
 :root {
   color-scheme: light;
-  --bg: #f3f4f6;
+  --bg: #f5f5f5;
   --surface: #ffffff;
-  --surface-muted: #eceff3;
-  --surface-dark: #111111;
+  --surface-muted: #ececec;
+  --surface-dark: #1a1a1a;
   --brand-blue: #0f2d69;
-  --text: #0f1720;
-  --text-muted: #5f6773;
-  --border: rgba(15, 23, 32, 0.1);
-  --accent: #1747ff;
-  --accent-soft: rgba(23, 71, 255, 0.08);
+  --text: #1a1a1a;
+  --text-muted: #4a4a4a;
+  --border: rgba(0, 0, 0, 0.1);
+  --accent: #0f2d69;
+  --accent-soft: rgba(15, 45, 105, 0.1);
   --radius-lg: 28px;
   --radius-md: 20px;
   --radius-sm: 14px;
-  --shadow: 0 22px 50px rgba(15, 23, 32, 0.08);
+  --shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
   --container: min(1180px, calc(100vw - clamp(20px, 4vw, 40px)));
+}
+
+@font-face {
+  font-family: "HSE Sans";
+  src: local("HSE Sans"), local("HSE Sans Regular");
+  font-display: swap;
 }
 
 *,
@@ -33,7 +39,7 @@ body {
     radial-gradient(circle at top left, rgba(23, 71, 255, 0.08), transparent 28%),
     var(--bg);
   color: var(--text);
-  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+  font-family: "HSE Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     sans-serif;
 }
 
@@ -609,8 +615,8 @@ h3 {
 }
 
 .lead-form input:focus {
-  border-color: rgba(23, 71, 255, 0.55);
-  box-shadow: 0 0 0 5px rgba(23, 71, 255, 0.1);
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-soft);
 }
 
 .form-note {
@@ -620,6 +626,73 @@ h3 {
 
 .form-note.is-success {
   color: #0f7a36;
+}
+
+.site-footer {
+  width: var(--container);
+  margin: 0 auto;
+  margin-top: clamp(24px, 4vw, 40px);
+  padding: clamp(24px, 4vw, 40px) clamp(20px, 4vw, 36px);
+  border-radius: clamp(24px, 4vw, 40px);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+  border-top: 1px solid var(--border);
+}
+
+.footer-inner {
+  display: grid;
+  gap: clamp(20px, 3vw, 28px);
+}
+
+.footer-contacts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: clamp(16px, 2vw, 24px);
+}
+
+.footer-heading {
+  margin: 0 0 8px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.footer-block {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+}
+
+.footer-block a {
+  color: var(--accent);
+}
+
+.footer-block a:hover {
+  text-decoration: underline;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(12px, 2vw, 20px);
+  font-size: 0.95rem;
+}
+
+.footer-links a {
+  color: var(--text-muted);
+}
+
+.footer-links a:hover {
+  color: var(--accent);
+}
+
+.footer-copy {
+  margin: 0;
+  padding-top: clamp(16px, 2vw, 24px);
+  border-top: 1px solid var(--border);
+  font-size: 0.9rem;
+  color: var(--text-muted);
 }
 
 @media (max-width: 1100px) {
